@@ -18,7 +18,7 @@ const Ex3 = () => {
         } else if (inputNum > 0) {
             setNum(inputNum);
         } else {
-            console.log("require number 1 - 100")
+            alert("require number 1 - 100")
         }
         setInputNum('')
     }
@@ -55,14 +55,17 @@ const Ex3 = () => {
     const clear = () => {
         setInputNum('');
         setNum('');
+        setResultC('');
+        setResultN([]);
+        setFilter("all");
     }
 
     return (
         <div>
             <div>
                 Number is require 1 - 100 : <input className='input' type="number" min={1} max={100} value={inputNum} onChange={handleChange}></input>
-                <button type="submit" className="submit" id='submit' value="Submit" onClick={() => handleSubmit()}>Submit</button>
-                <button>clr</button>
+                &nbsp;<button type="submit" className="submit" id='submit' value="Submit" onClick={() => handleSubmit()}>Submit</button>
+                &nbsp;<button onClick={() => clear()}>clr</button>
             </div>
             <br></br>
             <div><button onClick={() => setFilter("all")}>แสดงเลขทั้งหมด</button>&nbsp;&nbsp;<button onClick={() => setFilter("even")}>เลือกแค่เลขคู่</button>&nbsp;&nbsp;<button onClick={() => setFilter("odd")}>เลือกแค่เลขคี่</button></div>

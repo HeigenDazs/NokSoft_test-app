@@ -2,3 +2,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.split {
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+}
+
+.div {
+  white-space: pre-wrap;
+}
